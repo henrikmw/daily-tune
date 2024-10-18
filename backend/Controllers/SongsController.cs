@@ -21,7 +21,6 @@ namespace backend.Controllers
         {
             var song = await _spotifyService.GetSongByIdAsync(songId);
             
-            // Log the song details
             _logger.LogInformation("Retrieved song: {@Song}", song);
 
             if (song.Name == null)
